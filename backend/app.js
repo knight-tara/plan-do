@@ -38,7 +38,5 @@ app.use((err, _req, res, _next) => {
     }
 });
 
-console.log('APP.JS API KEY:', process.env.OPENAI_API_KEY)
-
 // Export app object
 export default app;

@@ -1,10 +1,7 @@
 // SERVER SETUP
 
 // Load environment variables
-import dotenv from 'dotenv';
-dotenv.config();
-
-console.log('INDEX API KEY:', process.env.OPENAI_API_KEY)
+import 'dotenv/config';
 
 // Import main application logic
 import app from './app.js';
