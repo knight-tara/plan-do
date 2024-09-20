@@ -1,10 +1,13 @@
 // SERVER SETUP
 
 // Load environment variables
-require("dotenv").config();
+import dotenv from 'dotenv';
+dotenv.config();
+
+console.log('INDEX API KEY:', process.env.OPENAI_API_KEY)
 
 // Import main application logic
-const app = require("./app.js");
+import app from './app.js';
 
 // Define function that starts the server & makes it listen for incoming HTTP requests
 const listenForRequests = () => {

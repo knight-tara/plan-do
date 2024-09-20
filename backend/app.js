@@ -1,13 +1,13 @@
 // APPLICATION LOGIC
 
 // Import Express library
-const express = require("express"); 
+import express from 'express'; 
 
 // Import CORS middleware
-const cors = require("cors");
+import cors from 'cors';
 
 // Import routers
-const inspirationRouter = require("./routes/inspiration");
+import inspirationRouter from './routes/inspiration.js';
 
 // Initialise Express application
 const app = express();
@@ -38,5 +38,7 @@ app.use((err, _req, res, _next) => {
     }
 });
 
+console.log('APP.JS API KEY:', process.env.OPENAI_API_KEY)
+
 // Export app object
-module.exports = app;
+export default app;
