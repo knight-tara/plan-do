@@ -2,12 +2,25 @@
 
 import OpenAI from 'openai';
 
-const openAIClient = new OpenAI({
+const openAI = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
 
-const getInspiration = () => {
-    console.log("INSPIRED") //UPDATE
+const getInspiration = async () => {
+    const completion = await openAI.chat.completions.create({
+        messages:[
+            {
+                "role": "system",
+                "content": "You are a helpful assistant"
+            },
+            {
+                "role": "user",
+                "content": "What day is Christmas?"
+            }
+        ],
+        model: "gpt-4o"
+    })
+    console.log(completion.choices[0].message.content);
 };
 
 getInspiration();
