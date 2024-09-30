@@ -1,0 +1,5 @@
+// FUNCTIONS ENCAPSULATING COMMUNICATION WITH THE BACKEND
+
+// Retrieve & store backend URL
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
