@@ -10,7 +10,7 @@ const router = express.Router();
 import inspirationController from '../controllers/inspiration.js';
 
 // Define routes that our API will respond to
-router.get("/", inspirationController.getInspiration);
+router.post("/", inspirationController.getInspiration);
 
 // Export router object (contains all route definitions)
 export default router;
