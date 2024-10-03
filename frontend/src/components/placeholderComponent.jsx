@@ -14,8 +14,6 @@ export const PlaceholderComponent = () => {
             noOfGuests: 15,
             noOfDays: 3,
             location: "UK",
-            accommodationType: "air BnB",
-            activitiesPlanned: "none",
             budgetPerPerson: "undecided"
         };
 

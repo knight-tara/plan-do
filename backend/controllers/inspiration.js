@@ -13,8 +13,6 @@ const getInspiration = async (req, res) => {
         noOfGuests: req.body.noOfGuests,
         noOfDays: req.body.noOfDays,
         location: req.body.location,
-        accomodation: req.body.accomodation,
-        activities: req.body.activities,
         budget: req.body.budget,
     };
     // console.log(userInput.eventType);
@@ -27,15 +25,16 @@ const getInspiration = async (req, res) => {
             },
             {
                 "role": "user",
-                "content": `I want you to help me organise a ${userInput.eventType} party`
+                "content": `I want you to help me organise a ${userInput.eventType} party. The event will be ${userInput.noOfDays} long and there will be ${userInput.noOfGuests} guests. I want the event to be in ${userInput.location} and the budget is ${userInput.budget}. Please provide 3 location ideas in raw JSON format without using markdown formatting or code blocks - each location idea should have the following structure: {"location": "location name", "why": "one or two sentences on why you have chosen this location for the event", "option1": {"activities": "a list of activity suggestions","accommodation": "a list of accommodation suggestions e.g. air BnB, hotel","budgetPerPerson": {"minimumBudget": "minimum budget per person based on activities, location and accommodation","maximumBudget": "maximum budget per person based on activities, location and accommodation"}},"option2": {"activities": "a list of activity suggestions","accommodation": "a list of accommodation suggestions e.g. air BnB, hotel","budgetPerPerson": {"minimumBudget": "minimum budget per person based on activities, location and accommodation","maximumBudget": "maximum budget per person based on activities, location and accommodation"}},"option3": {"activities": "a list of activity suggestions","accommodation": "a list of accommodation suggestions e.g. air BnB, hotel","budgetPerPerson": {"minimumBudget": "minimum budget per person based on activities, location and accommodation","maximumBudget": "maximum budget per person based on activities, location and accommodation"}}}. Option 1 should be the cheapest, option 2 mid-range and option 3 the most expensive. Do not include anything other than the JSON data in your response.`
             },
         ],
         model: "gpt-4o"
     })
-    console.log(completion.choices[0].message.content);
-};
+    const response = completion.choices[0].message.content;
+    console.log(response);
 
-// getInspiration();
+    res.json(JSON.parse(response));
+};
 
 // Define controller object for export (bundles functions)
 const inspirationController = {
