@@ -1,9 +1,9 @@
 import { getInspiration } from '../services/inspiration';
 import { useState } from 'react';
+import { Loading } from '../components/loading' //ADD LOADING SCREEN
 
 
-
-export const PlaceholderComponent = () => {
+export const Results = () => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
 
@@ -43,8 +43,9 @@ export const PlaceholderComponent = () => {
 
     return (
         <div>
-            <p>This is a placeholder test!</p>
-            <button onClick={testAPI}>Send test to backend</button>
+            <h2>Plan-Do</h2>
+            <h1>Here are your results ...</h1>
+            <button onClick={testAPI}>Show me</button>
             {renderResponse()}
             {renderError()}
         </div>
