@@ -1,34 +1,18 @@
-import { useState, useEffect } from "react";
+// TO DO:
+// add functionality to next and previous buttons
 
 export const Question5 = () => {
 
-    const [latitude, setLatitude] = useState(null);
-    const [longitude, setLongitude] = useState(null);
-
-    useEffect(() => {
-    if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                setLatitude(position.coords.latitude);
-                setLongitude(position.coords.longitude);
-            }, 
-            (error) => {
-                console.error("Error retrieving location:", error);
-            }
-        );
-    } else {
-        console.log("Geolocation unavailable");
-    }
-    }, []);
-
-    const handleHomeClick = () => {
-        sessionStorage.setItem()
+    const handleUkButtonClick = () => {
+        sessionStorage.setItem("location", "UK");
     }
 
-    const handleNextButtonClick = () => {
-        sessionStorage.setItem("userLatitude", latitude);
-        sessionStorage.setItem("userLongitude", longitude);
+    const handleEuropeButtonClick = () => {
+        sessionStorage.setItem("location", "europe");
+    }
 
+    const handleInspireMeButtonClick = () => {
+        sessionStorage.setItem("location", "anywhere, inspire me");
     }
 
     return (
@@ -40,10 +24,13 @@ export const Question5 = () => {
             <h1>& Where?</h1>
         </div>
         <div>
-            <button>Home</button><button>Away</button><button>Inspire Me!</button>
+            <button onClick={handleUkButtonClick}>UK</button>
+            <button onClick={handleEuropeButtonClick}>Europe</button>
+            <button onClick={handleInspireMeButtonClick}>Inspire Me!</button>
         </div>
         <div>
-            <button>Previous</button><button>Next</button>
+            <button>Previous</button>
+            <button>Next</button>
         </div>
         </>
     );

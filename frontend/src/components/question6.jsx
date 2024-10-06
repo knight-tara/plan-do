@@ -1,7 +1,18 @@
 // store answer in session storage
-// on submission, send ALL session storage answers to backend
+
+import { useState } from "react";
 
 export const Question6 = () => {
+
+    const [answer, setAnswer] = useState("");
+
+    const handleHelpButtonClick = () => {
+        setAnswer("I don't know, help me");
+    };
+
+    const handleNextButtonClick = () => {
+        sessionStorage.setItem("budget", answer);
+    };
 
     return (
         <>
@@ -12,10 +23,16 @@ export const Question6 = () => {
             <h1>Let's talk money $$</h1>
         </div>
         <div>
-            <button>I have budget of X per person ...</button><button>Help me figure it out!</button>
+            <input
+                name="budget"
+                placeholder="I have a budget of X per person ..."
+                onChange={(e) => setAnswer(e.target.value)}
+            />
+            <button onClick={handleHelpButtonClick}>Help me figure it out!</button>
         </div>
         <div>
-            <button>Previous</button><button>Next</button>
+            <button>Previous</button>
+            <button onClick={handleNextButtonClick}>Next</button>
         </div>
         </>
     );

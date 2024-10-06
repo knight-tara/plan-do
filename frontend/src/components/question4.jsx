@@ -1,6 +1,5 @@
 // TO DO:
 // add functionality to previous and next buttons
-// 
 
 import { useState } from "react";
 import DatePicker from "react-datepicker";
@@ -18,11 +17,8 @@ export const Question4 = () => {
     };
 
     const handleNextButtonClick = () => {
-        const date1 = new Date(startDate);
-        const date2 = new Date(endDate);
-        const timeDifference = date2.getTime() - date1.getTime();
-        const dayDifference = Math.round(timeDifference / (1000 *3600 * 24));
-        sessionStorage.setItem("noOfDays", dayDifference)
+        sessionStorage.setItem("startDate", startDate);
+        sessionStorage.setItem("endDate", endDate);
     };
 
     return (
