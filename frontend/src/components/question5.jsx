@@ -1,5 +1,6 @@
 // TO DO:
 // add functionality to next and previous buttons
+import { QuestionContainer } from "./questionContainer";
 
 export const Question5 = () => {
 
@@ -16,7 +17,7 @@ export const Question5 = () => {
     }
 
     return (
-        <>
+        <QuestionContainer>
         <div>
             <h2>Plan-Do</h2>
         </div>
@@ -32,7 +33,7 @@ export const Question5 = () => {
             <button>Previous</button>
             <button>Next</button>
         </div>
-        </>
+        </QuestionContainer>
     );
 
 };

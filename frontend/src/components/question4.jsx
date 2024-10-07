@@ -1,5 +1,6 @@
 // TO DO:
 // add functionality to previous and next buttons
+import { QuestionContainer } from "./questionContainer";
 
 import { useState } from "react";
 import DatePicker from "react-datepicker";
@@ -22,7 +23,7 @@ export const Question4 = () => {
     };
 
     return (
-        <>
+        <QuestionContainer>
         <div>
             <h2>Plan-Do</h2>
         </div>
@@ -42,7 +43,7 @@ export const Question4 = () => {
             <button>Previous</button>
             <button onClick={handleNextButtonClick}>Next</button>
         </div>
-        </>
+        </QuestionContainer>
     );
 
 };

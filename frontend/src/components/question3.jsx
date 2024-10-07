@@ -1,7 +1,7 @@
 //TO DO:
 // add validation for user input
 // add functionality to previous & next buttons (/ can we find arrows instead of text?)
-
+import { QuestionContainer } from "./questionContainer";
 import { useState } from "react";
 
 export const Question3 = () => {
@@ -13,7 +13,7 @@ export const Question3 = () => {
     };
 
     return (
-        <>
+        <QuestionContainer>
         <div>
             <h2>Plan-Do</h2>
         </div>
@@ -31,7 +31,7 @@ export const Question3 = () => {
             <button>Previous</button>
             <button onClick={handleNextButtonClick}>Next</button>
         </div>
-        </>
+        </QuestionContainer>
     );
 
 };

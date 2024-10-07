@@ -1,3 +1,5 @@
+import { QuestionContainer } from "./questionContainer";
+
 export const Question2 = () => {
 
     const handleHenButtonClick = () => {
@@ -14,7 +16,7 @@ export const Question2 = () => {
 
 
     return (
-        <>
+        <QuestionContainer>
         <div>
             <h2>Plan-Do</h2> 
         </div>
@@ -29,7 +31,7 @@ export const Question2 = () => {
         <div>
             <button>Next</button>
         </div>
-        </>
+        </QuestionContainer>
     );
 
 };

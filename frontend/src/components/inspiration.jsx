@@ -1,5 +1,7 @@
 import { getInspiration } from "../services/inspiration";
 import { useState } from "react";
+import { QuestionContainer } from "./questionContainer";
+
 import { Loading } from "./loading"; //ADD LOADING SCREEN
 import { InspirationCard } from "./inspirationCard"
 
@@ -7,7 +9,7 @@ export const Inspiration = () => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
 
-    const testAPI = async () => {
+    const sendRequestToBackend = async () => {
         const eventType = sessionStorage.getItem("eventType");
         const noOfGuests = sessionStorage.getItem("noOfGuests");
         const startDate = sessionStorage.getItem("startDate");
@@ -49,13 +51,14 @@ export const Inspiration = () => {
     };
 
     return (
+        <QuestionContainer>
         <div>
             <h2>Plan-Do</h2>
             <h1>Here are your results ...</h1>
-            <button onClick={testAPI}>Show me</button>
-            <InspirationCard />
+            <button onClick={sendRequestToBackend}>Show me</button>
             {renderResponse()}
             {renderError()}
         </div>
+        </QuestionContainer>
     );
 };

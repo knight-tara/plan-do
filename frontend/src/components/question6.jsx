@@ -1,5 +1,5 @@
 // store answer in session storage
-
+import { QuestionContainer } from "./questionContainer";
 import { useState } from "react";
 
 export const Question6 = () => {
@@ -15,7 +15,7 @@ export const Question6 = () => {
     };
 
     return (
-        <>
+        <QuestionContainer>
         <div>
             <h2>Plan-Do</h2>
         </div>
@@ -34,7 +34,7 @@ export const Question6 = () => {
             <button>Previous</button>
             <button onClick={handleNextButtonClick}>Next</button>
         </div>
-        </>
+        </QuestionContainer>
     );
 
 };

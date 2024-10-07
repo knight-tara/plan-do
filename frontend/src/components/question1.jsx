@@ -1,7 +1,10 @@
+import { QuestionContainer } from "./questionContainer";
+import { useRef } from "react";
+
 export const Question1 = () => {
 
     return (
-        <>
+        <QuestionContainer>
         <div>
             <h2>Plan-Do</h2> 
         </div>
@@ -13,7 +16,7 @@ export const Question1 = () => {
             <button>Yes</button>
             <button>Yes</button>
         </div>
-        </>
+        </QuestionContainer>
     );
 
 };
