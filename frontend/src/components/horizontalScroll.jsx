@@ -7,33 +7,44 @@ import { Question5 } from "./question5";
 import { Question6 } from "./question6";
 import "../index.css";
 
-
-export const HorizontalScroll = () => {
+export const HorizontalScroll = ({ scrollToInspiration }) => {
 
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({target: targetRef});
     const x = useTransform(scrollYProgress, [0,1], ["0%", "-80%"])
 
+    const questionRefs = [
+        useRef(null), // question 2 ref, index 0
+        useRef(null), // question 3 ref, index 1
+        useRef(null), // question 4 ref, index 2
+        useRef(null), // question 5 ref, index 3
+        useRef(null), // question 6 ref, index 4
+    ];
+
+    const scrollToQuestion = (index) => {
+        const questionRef = questionRefs[index]
+        questionRef.current.scrollIntoView({behaviour: "smooth"});
+    }
 
     return (
         <>
         <div className="carousel" ref={targetRef}>
             <div className="contentContainer">
                 <motion.div className="components" style={{ x }}>
-                    <div>
-                        <Question2 />
+                    <div ref={questionRefs[0]}>
+                        <Question2 scrollToNext={() => scrollToQuestion(1)}/>
                     </div>
-                    <div>
-                        <Question3 />
+                    <div ref={questionRefs[1]}>
+                        <Question3 scrollToNext={() => scrollToQuestion(2)} scrollToPrevious={() => scrollToQuestion(0)}/>
                     </div>
-                    <div>
-                        <Question4 />
+                    <div ref={questionRefs[2]}>
+                        <Question4 scrollToNext={() => scrollToQuestion(3)} scrollToPrevious={() => scrollToQuestion(1)}/>
                     </div>
-                    <div>
-                        <Question5 />
+                    <div ref={questionRefs[3]}>
+                        <Question5 scrollToNext={() => scrollToQuestion(4)} scrollToPrevious={() => scrollToQuestion(2)}/>
                     </div>
-                    <div>
-                        <Question6 />
+                    <div ref={questionRefs[4]}>
+                        <Question6 scrollToNext={scrollToInspiration} scrollToPrevious={() => scrollToQuestion(3)}/>
                     </div>
                     </motion.div>
                 </div>

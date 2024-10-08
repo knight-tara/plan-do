@@ -1,8 +1,7 @@
-// store answer in session storage
 import { QuestionContainer } from "./questionContainer";
 import { useState } from "react";
 
-export const Question6 = () => {
+export const Question6 = ({ scrollToNext, scrollToPrevious }) => {
 
     const [answer, setAnswer] = useState("");
 
@@ -12,6 +11,11 @@ export const Question6 = () => {
 
     const handleNextButtonClick = () => {
         sessionStorage.setItem("budget", answer);
+        scrollToNext();
+    };
+
+    const handlePreviousButtonClick = () => {
+        scrollToPrevious();
     };
 
     return (
@@ -31,7 +35,7 @@ export const Question6 = () => {
             <button onClick={handleHelpButtonClick}>Help me figure it out!</button>
         </div>
         <div>
-            <button>Previous</button>
+            <button onClick={handlePreviousButtonClick}>Previous</button>
             <button onClick={handleNextButtonClick}>Next</button>
         </div>
         </QuestionContainer>

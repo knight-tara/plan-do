@@ -5,7 +5,7 @@ import { QuestionContainer } from "./questionContainer";
 import { Loading } from "./loading"; //ADD LOADING SCREEN
 import { InspirationCard } from "./inspirationCard"
 
-export const Inspiration = () => {
+export const Inspiration = ({ scrollToNext }) => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
 

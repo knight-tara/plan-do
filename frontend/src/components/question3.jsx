@@ -1,16 +1,20 @@
 //TO DO:
 // add validation for user input
-// add functionality to previous & next buttons (/ can we find arrows instead of text?)
 import { QuestionContainer } from "./questionContainer";
 import { useState } from "react";
 
-export const Question3 = () => {
+export const Question3 = ({ scrollToNext, scrollToPrevious }) => {
 
     const [answer, setAnswer] = useState("");
 
     const handleNextButtonClick = () => {
         sessionStorage.setItem("noOfGuests", answer);
+        scrollToNext();
     };
+
+    const handlePreviousButtonClick = () => {
+        scrollToPrevious();
+    }
 
     return (
         <QuestionContainer>
@@ -28,7 +32,7 @@ export const Question3 = () => {
             />
         </div>
         <div>
-            <button>Previous</button>
+            <button onClick={handlePreviousButtonClick}>Previous</button>
             <button onClick={handleNextButtonClick}>Next</button>
         </div>
         </QuestionContainer>

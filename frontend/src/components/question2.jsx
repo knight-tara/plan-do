@@ -1,6 +1,6 @@
 import { QuestionContainer } from "./questionContainer";
 
-export const Question2 = () => {
+export const Question2 = ({ scrollToNext }) => {
 
     const handleHenButtonClick = () => {
         sessionStorage.setItem('eventType', 'hen');
@@ -29,7 +29,7 @@ export const Question2 = () => {
             <button onClick={handleStenButtonClick}>Sten</button>
         </div>
         <div>
-            <button>Next</button>
+            <button onClick={scrollToNext}>Next</button>
         </div>
         </QuestionContainer>
     );

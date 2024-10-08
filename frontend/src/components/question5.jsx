@@ -1,19 +1,25 @@
-// TO DO:
-// add functionality to next and previous buttons
 import { QuestionContainer } from "./questionContainer";
 
-export const Question5 = () => {
+export const Question5 = ({ scrollToNext, scrollToPrevious }) => {
 
     const handleUkButtonClick = () => {
         sessionStorage.setItem("location", "UK");
-    }
+    };
 
     const handleEuropeButtonClick = () => {
         sessionStorage.setItem("location", "europe");
-    }
+    };
 
     const handleInspireMeButtonClick = () => {
         sessionStorage.setItem("location", "anywhere, inspire me");
+    };
+
+    const handleNextButtonClick = () => {
+        scrollToNext();
+    };
+
+    const handlePreviousButtonClick = () => {
+        scrollToPrevious();
     }
 
     return (
@@ -30,8 +36,8 @@ export const Question5 = () => {
             <button onClick={handleInspireMeButtonClick}>Inspire Me!</button>
         </div>
         <div>
-            <button>Previous</button>
-            <button>Next</button>
+            <button onClick={handlePreviousButtonClick}>Previous</button>
+            <button onClick={handleNextButtonClick}>Next</button>
         </div>
         </QuestionContainer>
     );
