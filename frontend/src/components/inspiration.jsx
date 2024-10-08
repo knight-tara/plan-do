@@ -1,11 +1,11 @@
 import { getInspiration } from "../services/inspiration";
 import { useState } from "react";
-import { QuestionContainer } from "./questionContainer";
+import { ComponentContainer } from "./componentContainer";
 
 import { Loading } from "./loading"; //ADD LOADING SCREEN
 import { InspirationCard } from "./inspirationCard"
 
-export const Inspiration = ({ scrollToNext }) => {
+export const Inspiration = () => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
 
@@ -51,7 +51,7 @@ export const Inspiration = ({ scrollToNext }) => {
     };
 
     return (
-        <QuestionContainer>
+        <ComponentContainer>
         <div>
             <h2>Plan-Do</h2>
             <h1>Here are your results ...</h1>
@@ -59,6 +59,6 @@ export const Inspiration = ({ scrollToNext }) => {
             {renderResponse()}
             {renderError()}
         </div>
-        </QuestionContainer>
+        </ComponentContainer>
     );
 };

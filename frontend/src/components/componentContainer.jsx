@@ -1,6 +1,6 @@
 import "../index.css"
 
-export const QuestionContainer = ({children}) => {
+export const ComponentContainer = ({children}) => {
 
     return (
         <div className="component-container">

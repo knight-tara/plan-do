@@ -23,14 +23,14 @@ export const HorizontalScroll = ({ scrollToInspiration }) => {
 
     const scrollToQuestion = (index) => {
         const questionRef = questionRefs[index]
-        questionRef.current.scrollIntoView({behaviour: "smooth"});
+        questionRef.current.scrollIntoView();
     }
 
     return (
         <>
         <div className="carousel" ref={targetRef}>
-            <div className="contentContainer">
-                <motion.div className="components" style={{ x }}>
+            <div className="horizontalQuestionContainer">
+                <motion.div className="horizontalQuestions" style={{ x }}>
                     <div ref={questionRefs[0]}>
                         <Question2 scrollToNext={() => scrollToQuestion(1)}/>
                     </div>

@@ -1,4 +1,4 @@
-import { QuestionContainer } from "./questionContainer";
+import { ComponentContainer } from "./componentContainer";
 
 export const Question2 = ({ scrollToNext }) => {
 
@@ -16,7 +16,7 @@ export const Question2 = ({ scrollToNext }) => {
 
 
     return (
-        <QuestionContainer>
+        <ComponentContainer>
         <div>
             <h2>Plan-Do</h2> 
         </div>
@@ -31,7 +31,7 @@ export const Question2 = ({ scrollToNext }) => {
         <div>
             <button onClick={scrollToNext}>Next</button>
         </div>
-        </QuestionContainer>
+        </ComponentContainer>
     );
 
 };

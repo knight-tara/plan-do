@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { QuestionContainer } from "./questionContainer";
+import { ComponentContainer } from "./componentContainer";
 
 
 export const Question4 = ({ scrollToNext, scrollToPrevious }) => {
@@ -26,7 +26,7 @@ export const Question4 = ({ scrollToNext, scrollToPrevious }) => {
     };
 
     return (
-        <QuestionContainer>
+        <ComponentContainer>
         <div>
             <h2>Plan-Do</h2>
         </div>
@@ -46,7 +46,7 @@ export const Question4 = ({ scrollToNext, scrollToPrevious }) => {
             <button onClick={handlePreviousButtonClick}>Previous</button>
             <button onClick={handleNextButtonClick}>Next</button>
         </div>
-        </QuestionContainer>
+        </ComponentContainer>
     );
 
 };

@@ -12,11 +12,11 @@ const App = () => {
   const inspirationRef = useRef(null);
 
   const scrollFromQuestion1ToHorizontalScroll = () => {
-    horizontalScrollRef.current.scrollIntoView({behavior: "smooth"});
+    horizontalScrollRef.current.scrollIntoView();
   };
 
   const scrollFromHorizontalScrollToInspiration = () => {
-    inspirationRef.current.scrollIntoView({behaviour: "smooth"});
+    inspirationRef.current.scrollIntoView({block: "start"});
   };
 
   return (
