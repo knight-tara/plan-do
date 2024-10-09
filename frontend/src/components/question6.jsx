@@ -1,7 +1,7 @@
 import { ComponentContainer } from "./componentContainer";
 import { useState } from "react";
 
-export const Question6 = ({ scrollToNext, scrollToPrevious }) => {
+export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend }) => {
 
     const [answer, setAnswer] = useState("");
 
@@ -12,6 +12,7 @@ export const Question6 = ({ scrollToNext, scrollToPrevious }) => {
     const handleNextButtonClick = () => {
         sessionStorage.setItem("budget", answer);
         scrollToNext();
+        sendRequestToBackend();
     };
 
     const handlePreviousButtonClick = () => {

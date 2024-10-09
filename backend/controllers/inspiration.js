@@ -31,7 +31,7 @@ const getInspiration = async (req, res) => {
         model: "gpt-4o"
     })
     const response = completion.choices[0].message.content;
-    console.log(response);
+    // console.log(response);
     res.json(JSON.parse(response));
 };
 

@@ -7,7 +7,7 @@ import { Question5 } from "./question5";
 import { Question6 } from "./question6";
 import "../index.css";
 
-export const HorizontalScroll = ({ scrollToInspiration }) => {
+export const HorizontalScroll = ({ scrollToInspiration, sendRequestToBackend }) => {
 
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({target: targetRef});
@@ -44,7 +44,7 @@ export const HorizontalScroll = ({ scrollToInspiration }) => {
                         <Question5 scrollToNext={() => scrollToQuestion(4)} scrollToPrevious={() => scrollToQuestion(2)}/>
                     </div>
                     <div ref={questionRefs[4]}>
-                        <Question6 scrollToNext={scrollToInspiration} scrollToPrevious={() => scrollToQuestion(3)}/>
+                        <Question6 scrollToNext={scrollToInspiration} scrollToPrevious={() => scrollToQuestion(3)} sendRequestToBackend={sendRequestToBackend}/>
                     </div>
                     </motion.div>
                 </div>

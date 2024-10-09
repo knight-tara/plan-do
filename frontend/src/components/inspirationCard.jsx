@@ -1,31 +1,35 @@
-export const InspirationCard = (responseObject) => {
+export const InspirationCard = ({ loading, inspiration }) => {
+
+    if (loading) {
+        return null;
+    }
 
     return (
         <>
         <div>
-            <h2>{responseObject.location}</h2>
-            <p>{responseObject.why}</p>
+            <h2>{inspiration.location}</h2>
+            <p>{inspiration.why}</p>
         </div>
         <div>
-            <h3>Option 1: £{responseObject.option1.budgetPerPerson.minimumBudget} - £{responseObject.option1.budgetPerPerson.maximumBudget}</h3>
+            <h3>Option 1: {inspiration.option1.budgetPerPerson.minimumBudget} - {inspiration.option1.budgetPerPerson.maximumBudget}</h3>
             <h4>Accomodation:</h4>
-            <p>{responseObject.option1.accommodation}</p>
+            <p>{inspiration.option1.accommodation}</p>
             <h4>Activities:</h4>
-            <p>{responseObject.option1.activities}</p>
+            <p>{inspiration.option1.activities}</p>
         </div>
         <div>
-            <h3>Option 2: £{responseObject.option2.budgetPerPerson.minimumBudget} - £{responseObject.option2.budgetPerPerson.maximumBudget}</h3>
+            <h3>Option 2: {inspiration.option2.budgetPerPerson.minimumBudget} - {inspiration.option2.budgetPerPerson.maximumBudget}</h3>
             <h4>Accomodation:</h4>
-            <p>{responseObject.option2.accommodation}</p>
+            <p>{inspiration.option2.accommodation}</p>
             <h4>Activities:</h4>
-            <p>{responseObject.option2.activities}</p>
+            <p>{inspiration.option2.activities}</p>
         </div>
         <div>
-            <h3>Option 3: £{responseObject.option3.budgetPerPerson.minimumBudget} - £{responseObject.option3.budgetPerPerson.maximumBudget}</h3>
+            <h3>Option 3: {inspiration.option3.budgetPerPerson.minimumBudget} - {inspiration.option3.budgetPerPerson.maximumBudget}</h3>
             <h4>Accomodation:</h4>
-            <p>{responseObject.option3.accommodation}</p>
+            <p>{inspiration.option3.accommodation}</p>
             <h4>Activities:</h4>
-            <p>{responseObject.option3.activities}</p>
+            <p>{inspiration.option3.activities}</p>
         </div>
         </>
     );
