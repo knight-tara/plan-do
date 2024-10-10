@@ -12,6 +12,10 @@ import App from './App.jsx'
 // Import global CSS file
 import './index.css'
 
+// Import React Slick CSS
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 // Insert main React component into "root" div in index.html
 createRoot(document.getElementById('root')).render(
   <StrictMode>

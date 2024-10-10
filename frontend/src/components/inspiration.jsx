@@ -1,23 +1,20 @@
-import { ComponentContainer } from "./componentContainer";
+// TO DO:
+// - add loading animation
+
+import { InspirationSlider } from "./inspirationSlider";
 // import { Loading } from "./loading"; //ADD LOADING SCREEN
-import { InspirationCard } from "./inspirationCard"
+
 
 export const Inspiration = ({ loading, inspirationResults }) => {
 
-    if (!inspirationResults || inspirationResults.length === 0) {
-        return <p>No results found</p>;
-    }
-
     return (
-        <ComponentContainer>
-        <div>
+        <div className="results-container">
             <h2>Plan-Do</h2>
             {loading ? 
             <h1>Loading ... </h1> : <h1>Here are your results ...</h1>}
-            <InspirationCard loading={loading} inspiration={inspirationResults[0]}/>
-            <InspirationCard loading={loading} inspiration={inspirationResults[1]}/>
-            <InspirationCard loading={loading} inspiration={inspirationResults[2]}/>
+            <InspirationSlider loading={loading} inspirationResults={inspirationResults} />
         </div>
-        </ComponentContainer>
     );
 };
+
+

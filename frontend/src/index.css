@@ -84,12 +84,12 @@ h1 {
 
 /* HORIZONTAL SCROLL STYLING */
 .carousel {
-  height: 500dvh;
+  height: 500vh;
 }
 
 .horizontalQuestionContainer {
-  height: 100dvh;
-  width: 500dvw;
+  height: 100vh;
+  width: 500vw;
   position: sticky;
   top: 0;
   display: flex;
@@ -106,13 +106,67 @@ h1 {
   grid-template-rows: 1fr;
 }
 
-/* COMPONENT STYLING*/
-.component-container {
-  height: 100dvh;
+/* COMPONENT STYLING - SECTIONS 1 & 2 (INTRO & HORIZONTAL SCROLL) */
+.question-container {
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 20px; 
 }
+
+/* COMPONENT STYLING - SECTION 3 (INSPIRATION) - NEEDS TO BE DIFFERENT BECAUSE OF SLIDER */
+.results-container {
+  height: 100vh;
+  width: 100vw;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px; 
+}
+
+
+/* INSPIRATION SLIDER STYLING*/
+.slider {
+  height: 100%;
+  width: 100%
+}
+
+/* INSPIRATION CARD STYLING*/
+.inspiration-card {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  flex-wrap: wrap;
+}
+
+.option-card-container {
+  height: auto;
+  width: 100%;
+  display: flex; /* all items within container are the same height */
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  overflow: auto;
+  flex-wrap: wrap; 
+}
+
+.option-card {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background-color: brown;
+}
+
 

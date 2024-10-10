@@ -1,5 +1,3 @@
-import { ComponentContainer } from "./componentContainer";
-
 export const Question1 = ({ scrollToNext }) => {
 
     const handleClickYes = () => {
@@ -7,7 +5,7 @@ export const Question1 = ({ scrollToNext }) => {
     };
 
     return (
-        <ComponentContainer>
+        <div className="question-container">
         <div>
             <h2>Plan-Do</h2> 
         </div>
@@ -19,7 +17,7 @@ export const Question1 = ({ scrollToNext }) => {
             <button onClick={handleClickYes}>Yes</button>
             <button onClick={handleClickYes}>Yes</button>
         </div>
-        </ComponentContainer>
+        </div>
     );
 
 };

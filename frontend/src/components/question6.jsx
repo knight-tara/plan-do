@@ -1,4 +1,3 @@
-import { ComponentContainer } from "./componentContainer";
 import { useState } from "react";
 
 export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend }) => {
@@ -20,7 +19,7 @@ export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend
     };
 
     return (
-        <ComponentContainer>
+        <div className="question-container">
         <div>
             <h2>Plan-Do</h2>
         </div>
@@ -39,7 +38,7 @@ export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend
             <button onClick={handlePreviousButtonClick}>Previous</button>
             <button onClick={handleNextButtonClick}>Next</button>
         </div>
-        </ComponentContainer>
+        </div>
     );
 
 };

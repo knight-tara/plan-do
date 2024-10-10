@@ -1,6 +1,5 @@
 //TO DO:
 // add validation for user input
-import { ComponentContainer } from "./componentContainer";
 import { useState } from "react";
 
 export const Question3 = ({ scrollToNext, scrollToPrevious }) => {
@@ -17,7 +16,7 @@ export const Question3 = ({ scrollToNext, scrollToPrevious }) => {
     }
 
     return (
-        <ComponentContainer>
+        <div className="question-container">
         <div>
             <h2>Plan-Do</h2>
         </div>
@@ -35,7 +34,7 @@ export const Question3 = ({ scrollToNext, scrollToPrevious }) => {
             <button onClick={handlePreviousButtonClick}>Previous</button>
             <button onClick={handleNextButtonClick}>Next</button>
         </div>
-        </ComponentContainer>
+        </div>
     );
 
 };
