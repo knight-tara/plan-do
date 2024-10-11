@@ -4,11 +4,13 @@ import { InspirationCard } from "./inspirationCard"
 export const InspirationSlider = ({ loading, inspirationResults }) => {
 
     const settings = {
-        dots: true,
-        infinite: true,
+        dots: false,
+        infinite: false,
+        centerMode: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: true,
     };
 
     return (

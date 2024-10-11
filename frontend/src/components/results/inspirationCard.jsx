@@ -16,7 +16,7 @@ export const InspirationCard = ({ loading, inspiration }) => {
             <h2>{inspiration.location}</h2>
             <p>{inspiration.why}</p>
         </div>
-        <div>
+        <div className="option-card-container">
             {inspiration.options.map((option, index) => (
                 <div key={index}>
                     <OptionCard loading={loading} option={option} index={index + 1} />
