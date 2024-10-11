@@ -1,10 +1,9 @@
 // REACT APPLICATION
 
-// Imports
-import { useRef, useState} from "react";
-import { Question1 } from "./components/question1";
-import { HorizontalScroll } from "./components/horizontalScroll";
-import { Inspiration } from "./components/inspiration";
+import { useRef, useState } from "react";
+import { Question1 } from "./components/intro/question1";
+import { HorizontalScroll } from "./components/questions/horizontalScroll";
+import { InspirationContainer } from "./components/results/inspirationContainer";
 import { getInspiration } from "./services/inspiration";
 
 const App = () => {
@@ -12,7 +11,6 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   const sendRequestToBackend = async () => {
-
     setLoading(true);
 
     const eventType = sessionStorage.getItem("eventType");
@@ -28,21 +26,20 @@ const App = () => {
       startDate,
       endDate,
       location,
-      budget
+      budget,
     };
 
     try {
       const response = await getInspiration(userInput);
       console.log("app.js:", response);
       setInspirationResults(response);
-      console.log("inspirationResults:", response)
+      console.log("inspirationResults:", response);
     } catch (error) {
       console.error("Error fetching inspiration data:", error);
     } finally {
       setLoading(false);
     }
   };
-
 
   const horizontalScrollRef = useRef(null);
   const inspirationRef = useRef(null);
@@ -52,19 +49,25 @@ const App = () => {
   };
 
   const scrollFromHorizontalScrollToInspiration = () => {
-    inspirationRef.current.scrollIntoView({block: "start"});
+    inspirationRef.current.scrollIntoView({ block: "start" });
   };
 
   return (
     <>
       <div>
-        <Question1 scrollToNext={scrollFromQuestion1ToHorizontalScroll}/>
+        <Question1 scrollToNext={scrollFromQuestion1ToHorizontalScroll} />
       </div>
       <div ref={horizontalScrollRef}>
-        <HorizontalScroll sendRequestToBackend={sendRequestToBackend} scrollToInspiration={scrollFromHorizontalScrollToInspiration} />
+        <HorizontalScroll
+          sendRequestToBackend={sendRequestToBackend}
+          scrollToInspiration={scrollFromHorizontalScrollToInspiration}
+        />
       </div>
       <div ref={inspirationRef}>
-        <Inspiration loading={loading} inspirationResults={inspirationResults}/>
+        <InspirationContainer
+          loading={loading}
+          inspirationResults={inspirationResults}
+        />
       </div>
     </>
   );
