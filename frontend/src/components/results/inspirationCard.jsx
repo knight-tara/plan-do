@@ -1,4 +1,4 @@
-import { OptionSlider } from "./optionSlider";
+import { OptionCard } from "./optionCard";
 
 export const InspirationCard = ({ loading, inspiration }) => {
 
@@ -17,7 +17,11 @@ export const InspirationCard = ({ loading, inspiration }) => {
             <p>{inspiration.why}</p>
         </div>
         <div>
-        <OptionSlider loading={loading} options={inspiration.options}  />
+            {inspiration.options.map((option, index) => (
+                <div key={index}>
+                    <OptionCard loading={loading} option={option} index={index + 1} />
+                </div>
+            ))} 
         </div>
         </div>
     );
