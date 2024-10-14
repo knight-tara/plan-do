@@ -1,6 +1,8 @@
+
 //TO DO:
 // add validation for user input
 import { useState } from "react";
+import icon from "../../assets/plan-do-icon-white.png";
 
 export const Question3 = ({ scrollToNext, scrollToPrevious }) => {
 
@@ -16,9 +18,9 @@ export const Question3 = ({ scrollToNext, scrollToPrevious }) => {
     }
 
     return (
-        <div className="question-container">
+        <div className="question-container horizontal-scroll-style">
         <div>
-            <h2>Plan-Do</h2>
+        <img src={icon} alt="plan-do-icon-white" className="icon-white" />
         </div>
         <div>
             <h1>For how many?</h1>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import icon from "../../assets/plan-do-icon-white.png";
 
 export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend }) => {
 
@@ -19,12 +20,12 @@ export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend
     };
 
     return (
-        <div className="question-container">
+        <div className="question-container horizontal-scroll-style">
         <div>
-            <h2>Plan-Do</h2>
+        <img src={icon} alt="plan-do-icon-white" className="icon-white" />
         </div>
         <div>
-            <h1>Let's talk money $$</h1>
+            <h1>Let's talk money</h1>
         </div>
         <div>
             <input

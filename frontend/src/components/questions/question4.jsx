@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import icon from "../../assets/plan-do-icon-white.png";
 
 export const Question4 = ({ scrollToNext, scrollToPrevious }) => {
 
@@ -24,9 +25,9 @@ export const Question4 = ({ scrollToNext, scrollToPrevious }) => {
     };
 
     return (
-        <div className="question-container">
+        <div className="question-container horizontal-scroll-style">
         <div>
-            <h2>Plan-Do</h2>
+        <img src={icon} alt="plan-do-icon-white" className="icon-white" />
         </div>
         <div>
             <h1>When?</h1>

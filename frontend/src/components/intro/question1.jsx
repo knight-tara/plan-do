@@ -1,3 +1,6 @@
+import logo from "../../assets/plan-do-logo-pink.png";
+import { ButtonContained } from "../ui/button"
+
 export const Question1 = ({ scrollToNext }) => {
 
     const handleClickYes = () => {
@@ -5,19 +8,21 @@ export const Question1 = ({ scrollToNext }) => {
     };
 
     return (
-        <div className="question-container">
+        <>
+        <div className="question-container intro-style">
         <div>
-            <h2>Plan-Do</h2> 
+            <img src={logo} alt="plan-do-logo" className="logo" />
         </div>
         <div>
             <h1>Ready to plan?</h1>
         </div>
         <div>
-            <button onClick={handleClickYes}>Yes</button>
-            <button onClick={handleClickYes}>Yes</button>
-            <button onClick={handleClickYes}>Yes</button>
+            <ButtonContained text="Yes" onClick={handleClickYes} sx={{backgroundColor: '#fe5474'}}/>
+            <ButtonContained text="Yes" onClick={handleClickYes}/>
+            <ButtonContained text="Yes" onClick={handleClickYes}/>
         </div>
         </div>
+        </>
     );
 
 };

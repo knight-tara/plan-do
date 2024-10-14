@@ -31,7 +31,7 @@ export const HorizontalScroll = ({
   return (
     <>
       <div className="carousel" ref={targetRef}>
-        <div className="horizontalQuestionContainer">
+        <div className="horizontalQuestionContainer ">
           <motion.div className="horizontalQuestions" style={{ x }}>
             <div ref={questionRefs[0]}>
               <Question2 scrollToNext={() => scrollToQuestion(1)} />

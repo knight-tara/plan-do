@@ -1,3 +1,4 @@
+import icon from "../../assets/plan-do-icon-white.png";
 export const Question5 = ({ scrollToNext, scrollToPrevious }) => {
 
     const handleUkButtonClick = () => {
@@ -21,12 +22,12 @@ export const Question5 = ({ scrollToNext, scrollToPrevious }) => {
     }
 
     return (
-        <div className="question-container">
+        <div className="question-container horizontal-scroll-style">
         <div>
-            <h2>Plan-Do</h2>
+        <img src={icon} alt="plan-do-icon-white" className="icon-white" />
         </div>
         <div>
-            <h1>& Where?</h1>
+            <h1>Where?</h1>
         </div>
         <div>
             <button onClick={handleUkButtonClick}>UK</button>
