@@ -1,4 +1,5 @@
 import icon from "../../assets/plan-do-icon-white.png";
+import { CustomButton } from "../ui/button";
 export const Question5 = ({ scrollToNext, scrollToPrevious }) => {
 
     const handleUkButtonClick = () => {
@@ -30,15 +31,39 @@ export const Question5 = ({ scrollToNext, scrollToPrevious }) => {
             <h1>Where?</h1>
         </div>
         <div>
-            <button onClick={handleUkButtonClick}>UK</button>
-            <button onClick={handleEuropeButtonClick}>Europe</button>
-            <button onClick={handleInspireMeButtonClick}>Inspire Me!</button>
+            <CustomButton 
+                text="UK"
+                variant="contained"
+                color="secondary"
+                onClick={handleUkButtonClick}
+            />
+            <CustomButton 
+                text="Europe"
+                variant="contained"
+                color="secondary"
+                onClick={handleEuropeButtonClick}
+            />
+            <CustomButton 
+                text="Inspire Me!"
+                variant="outlined"
+                color="secondary"
+                onClick={handleInspireMeButtonClick}
+            />
         </div>
         <div>
-            <button onClick={handlePreviousButtonClick}>Previous</button>
-            <button onClick={handleNextButtonClick}>Next</button>
+            <CustomButton
+                onClick={handlePreviousButtonClick}
+                variant="contained"
+                color="secondary"
+                iconDirection="left"
+            />
+            <CustomButton
+                onClick={handleNextButtonClick}
+                variant="contained"
+                color="secondary"
+                iconDirection="right"
+            />
         </div>
         </div>
     );
-
 };
