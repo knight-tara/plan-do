@@ -202,3 +202,24 @@ h1 {
   max-width: 55px;
   height: auto;
 }
+
+/* DATE PICKER STYLING*/
+
+.react-datepicker {
+  font-family: "Merriweather", serif;
+}
+
+.react-datepicker__day--in-range {
+  background-color:#fe5474;
+  color: white;
+}
+
+.react-datepicker__day--in-selecting-range {
+  background-color:#fe5474 !important;
+  color: white;
+}
+
+.react-datepicker__day--in-range:hover {
+  background-color: #fdc16c;
+  color: white;
+}

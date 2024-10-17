@@ -1,23 +1,15 @@
-import { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import icon from "../../assets/plan-do-icon-white.png";
+import { CustomDatePicker } from "../ui/datePicker";
 import { CustomButton } from "../ui/button";
 
 export const Question4 = ({ scrollToNext, scrollToPrevious }) => {
 
-    const [ startDate, setStartDate ] = useState();
-    const [ endDate, setEndDate ] = useState();
-
-    const handleDateSelection = (range) => {
-        const [ startDate, endDate ] = range;
-        setStartDate(startDate);
-        setEndDate(endDate);
+    const handleDateRangeSelection = ({startDate, endDate}) => {
+        sessionStorage.setItem("startDate", startDate);
+        sessionStorage.setItem("endDate", endDate);
     };
 
     const handleNextButtonClick = () => {
-        sessionStorage.setItem("startDate", startDate);
-        sessionStorage.setItem("endDate", endDate);
         scrollToNext();
     };
 
@@ -34,12 +26,8 @@ export const Question4 = ({ scrollToNext, scrollToPrevious }) => {
             <h1>When?</h1>
         </div>
         <div>
-            <DatePicker
-                selected={startDate}
-                onChange={handleDateSelection}
-                startDate={startDate}
-                endDate={endDate}
-                selectsRange
+            <CustomDatePicker 
+                onDateSelection={handleDateRangeSelection}
             />
         </div>
         <div>
