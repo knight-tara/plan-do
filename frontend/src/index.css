@@ -209,17 +209,60 @@ h1 {
   font-family: "Merriweather", serif;
 }
 
+.react-datepicker__day:hover {
+  background-color:#fdc16c !important;
+  color: white;
+}
+
+.react-datepicker__day--selected {
+  background-color: #fe5474 !important;
+  color: white;
+
+  &:hover {
+    background-color: #fdc16c !important;
+    color: white;
+  }
+}
+
 .react-datepicker__day--in-range {
   background-color:#fe5474;
   color: white;
+
+  &:hover {
+    background-color: #fdc16c !important;
+    color: white;
+  }
 }
 
 .react-datepicker__day--in-selecting-range {
   background-color:#fe5474 !important;
   color: white;
+
+  &:hover {
+    background-color: #fdc16c !important;
+    color: white;
+  }
 }
 
-.react-datepicker__day--in-range:hover {
-  background-color: #fdc16c;
-  color: white;
+.react-datepicker__day--keyboard-selected {
+  background-color: inherit;
+  color: inherit;
+
+  &:hover {
+    background-color: #fdc16c !important;
+  }
+}
+
+.react-datepicker__navigation-icon--previous {
+  border-right-color: #fe5474 !important;
+}
+
+.react-datepicker__input-container input {
+  height: 50px;
+  color:#fe5474;
+  font-family: "Merriweather", serif;
+  border: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
 }

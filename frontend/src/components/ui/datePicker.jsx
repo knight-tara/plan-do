@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export const CustomDatePicker = ({ onDateSelection }) => {
 
-    const [startDate, setStartDate] = useState(new Date());
+    const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
 
     const handleDateSelection = (dateRange) => {
@@ -23,7 +23,7 @@ export const CustomDatePicker = ({ onDateSelection }) => {
             startDate={startDate}
             endDate={endDate}
             selectsRange
-            inline
+            // inline
         />
 
     );
