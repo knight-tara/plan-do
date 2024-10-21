@@ -25,23 +25,25 @@ export const Question4 = ({ scrollToNext, scrollToPrevious }) => {
         <div>
             <h1>When?</h1>
         </div>
-        <div>
+        <div className="option-button-container date-picker">
             <CustomDatePicker 
                 onDateSelection={handleDateRangeSelection}
             />
         </div>
-        <div>
+        <div className="navigation-button-container">
             <CustomButton
                 onClick={handlePreviousButtonClick}
                 variant="contained"
                 color="secondary"
                 iconDirection="left"
+                size="small"
             />
             <CustomButton
                 onClick={handleNextButtonClick}
                 variant="contained"
                 color="secondary"
                 iconDirection="right"
+                size="small"
             />
         </div>
         </div>

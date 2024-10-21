@@ -30,32 +30,36 @@ export const Question2 = ({ scrollToNext }) => {
         <div>
             <h1>First things first ...</h1>
         </div>
-        <div>
+        <div className="option-button-container">
         <CustomButton
             text="Hen"
             onClick={handleHenButtonClick}
             variant="contained"
             color="secondary"
+            size="large"
         />
         <CustomButton
             text="Stag"
             onClick={handleStagButtonClick}
             variant="contained"
             color="secondary"
+            size="large"
         />
         <CustomButton
             text="Sten"
             onClick={handleStenButtonClick}
             variant="contained"
             color="secondary"
+            size="large"
         />
         </div>
-        <div>
+        <div className="navigation-button-container">
         <CustomButton
             onClick={scrollToNext}
             variant="contained"
             color="secondary"
             iconDirection="right"
+            size="small"
         />
         </div>
     </div>

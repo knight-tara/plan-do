@@ -25,26 +25,29 @@ export const Question3 = ({ scrollToNext, scrollToPrevious }) => {
         <div>
             <h1>For how many?</h1>
         </div>
-        <div>
+        <div className="option-button-container">
             <CustomTextField
                 label=""
-                variant="filled"
+                variant="outlined"
                 color="secondary"
                 onChange={(e) => setAnswer(e.target.value)}
+                size="small"
             />
         </div>
-        <div>
+        <div className="navigation-button-container">
             <CustomButton
                 onClick={handlePreviousButtonClick}
                 variant="contained"
                 color="secondary"
                 iconDirection="left"
+                size="small"
             />
             <CustomButton
                 onClick={handleNextButtonClick}
                 variant="contained"
                 color="secondary"
                 iconDirection="right"
+                size="small"
             />
         </div>
         </div>

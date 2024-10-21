@@ -15,21 +15,24 @@ export const Question1 = ({ scrollToNext }) => {
         <div>
           <h1>Ready to plan?</h1>
         </div>
-        <div>
+        <div className="option-button-container">
           <CustomButton
             text="Yes"
             onClick={handleClickYes}
             variant="contained"
+            size="large"
           />
           <CustomButton
             text="Yes"
             onClick={handleClickYes}
             variant="contained"
+            size="large"
           />
           <CustomButton
             text="Yes"
             onClick={handleClickYes}
             variant="contained"
+            size="large"
           />
         </div>
       </div>

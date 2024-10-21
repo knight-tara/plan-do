@@ -1,6 +1,6 @@
 // DEFINE LOGIC FOR HANDLING REQUESTS
 
-import OpenAI from 'openai';
+import OpenAI from 'openai/index.mjs';
 
 const openAI = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY

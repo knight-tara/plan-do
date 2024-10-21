@@ -7,10 +7,6 @@ export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend
 
     const [answer, setAnswer] = useState("");
 
-    // const handleHelpButtonClick = () => {
-    //     setAnswer("I don't know, help me");
-    // };
-
     const handleNextButtonClick = () => {
         sessionStorage.setItem("budget", answer);
         scrollToNext();
@@ -29,32 +25,29 @@ export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend
         <div>
             <h1>Let's talk money</h1>
         </div>
-        <div>
+        <div className="option-button-container">
             <CustomTextField
-                label="Budget per person (£)"
-                variant="filled"
-                color="secondary"
-                onChange={(e) => setAnswer(e.target.value)}
-            />
-            {/* <CustomButton
-                text="Inspire Me!"
-                onClick={handleHelpButtonClick}
+                label=""
                 variant="outlined"
                 color="secondary"
-            /> */}
+                onChange={(e) => setAnswer(e.target.value)}
+                size="small"
+            />
         </div>
-        <div>
+        <div className="navigation-button-container">
             <CustomButton
                 onClick={handlePreviousButtonClick}
                 variant="contained"
                 color="secondary"
                 iconDirection="left"
+                size="small"
             />
             <CustomButton
                 onClick={handleNextButtonClick}
                 variant="contained"
                 color="secondary"
                 iconDirection="right"
+                size="small"
             />
         </div>
         </div>
