@@ -8,9 +8,8 @@ import app from './app.js';
 
 // Define function that starts the server & makes it listen for incoming HTTP requests
 const listenForRequests = () => {
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () => {
-        console.log(`Now listening on port ${PORT}`);
+    app.listen(process.env.PORT, () => {
+        console.log(`Now listening on port ${process.env.PORT}`);
     });
 };
 
