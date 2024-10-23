@@ -1,7 +1,7 @@
 # Plan-Do
-An AI-powered events idea generator, which returns suggestions based on the user's inputs (hen/stag/sten-dos only at the minute!).
+An AI-powered events idea generator, which returns suggestions based on the user's inputs.
 
-Have a go yourself: [Plan-Do Link](https://plando.onrender.com/)
+[Check it out!](https://plando.onrender.com/)
 
 ## Technologies Used
 
