@@ -8,6 +8,7 @@ body {
   font-family: "Merriweather", serif;
   font-weight: 400;
   font-style: normal;
+  overflow: hidden;
 }
 
 h1 {
@@ -61,14 +62,26 @@ h1 {
 .results-container {
   height: 100vh;
   width: 100vw;
-  /* display: flex; */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* display: grid;
+  place-items: center; */
   background-image: linear-gradient(#fe5474, #fe8867, #fdc16c);
+  padding-left: 50px;
+  padding-top: 25px;
 }
 
 .results-container h1 {
+  color: white;
+}
+
+.results-container h3 {
+  color: white;
+}
+
+.results-container h4 {
+  color: white;
+}
+
+.results-container p {
   color: white;
 }
 
@@ -88,6 +101,10 @@ h1 {
   justify-content: center;
   overflow: auto;
   flex-wrap: wrap;
+}
+
+.inspiration-card h2 {
+  color: #fdc16c;
 }
 
 /* OPTION CARD STYLING*/
@@ -110,6 +127,11 @@ h1 {
   justify-content: center;
   overflow: auto;
 }
+
+/* .option-card h3 {
+  color:#fdc16c;
+  font-style: italic
+} */
 
 /* BACKGROUND STYLING*/
 

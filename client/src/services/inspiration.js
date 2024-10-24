@@ -16,6 +16,8 @@ export const getInspiration = async (userInput) => {
 
     const response = await fetch(`${BACKEND_URL}/inspiration`, requestOptions);
 
+    console.log("Backend URL:", {BACKEND_URL});
+
     if (response.status !== 200) {
         throw new Error('Unable to retrieve favourites');
     }

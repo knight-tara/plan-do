@@ -8,7 +8,7 @@ export const InspirationContainer = ({ loading, inspirationResults }) => {
       <img src={logo} alt="plan-do-logo" className="logo" />
       {loading ? <Loading/> : 
       <div>
-      <h1>Here are your results ...</h1>
+      <h1>Here's some ideas ...</h1>
       <InspirationSlider
         loading={loading}
         inspirationResults={inspirationResults}

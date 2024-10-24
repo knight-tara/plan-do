@@ -27,7 +27,7 @@ export const Question6 = ({ scrollToNext, scrollToPrevious, sendRequestToBackend
         </div>
         <div className="option-button-container">
             <CustomTextField
-                label=""
+                label="(£) budget per person"
                 variant="outlined"
                 color="secondary"
                 onChange={(e) => setAnswer(e.target.value)}
